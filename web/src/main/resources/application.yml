@@ -5,5 +5,9 @@
 #    static-path-pattern: "/static/**"
 
 spring:
+  h2:
+    console:
+      enabled: true
+
   thymeleaf:
     cache: false
