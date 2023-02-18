@@ -31,6 +31,10 @@ dependencies {
 
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'io.r2dbc:r2dbc-h2'
+
+    // R2DBC - MySql
+    implementation 'dev.miku:r2dbc-mysql:0.8.2.RELEASE'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
 }
