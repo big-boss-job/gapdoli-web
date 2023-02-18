@@ -1,8 +1,11 @@
-package com.gapdoli.web.domain
+package com.gapdoli.web.domain.entity.goods
 
+import com.gapdoli.web.domain.entity.goods.enums.StockNoticeState
 import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Table
 import java.time.LocalDateTime
 
+@Table(name = "goods")
 class Goods(
 
   @Id
@@ -14,11 +17,11 @@ class Goods(
 
   val name: String,
 
-  val providerKind: String,
+  val providerKind: String?,
 
-  val providerCode: String,
+  val providerCode: String?,
 
-  val providerName: String,
+  val providerName: String?,
 
   val supplyPrice: Int = 0,
 
@@ -32,9 +35,11 @@ class Goods(
 
   val stockNoticeState: StockNoticeState = StockNoticeState.N,
 
-  val isDeleted: DeleteStatus = DeleteStatus.FALSE,
+  // TODO : ENUM 으로 변경 필요
+//  val isDeleted: DeleteStatus = DeleteStatus.FALSE,
+  val isDeleted: Int,
 
-  val orderVal: Char,
+  val orderVal: Int?,
 
   val updateDate: LocalDateTime,
 
