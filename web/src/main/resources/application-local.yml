@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/gapdoli
+    username: root
+    password: big
+
+logging:
+  level:
+    org.springframework.r2dbc.core: debug
