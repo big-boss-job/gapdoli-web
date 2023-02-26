@@ -12,6 +12,7 @@ class Goods(
 ) {
 
   // TODO : 상품리스트
+  // TODO : view page 에 필요한 dto 생성 및 로직 개발 필요
   @GetMapping("/goods/goods-list")
   fun goodsList(model: Model): Mono<String> {
     model.addAttribute("goodsList", goodsService.findAll())
