@@ -70,17 +70,18 @@
         </tr>
       </thead>
       <tbody>
-      <tr class="text-md-center">
-        <td>제품번호</td>
-        <td>재고(상세)</td>
-        <td>지난 3개월 판매 수</td>
-        <td>재고(소포장단위)</td>
-        <td>박스입수량</td>
-        <td>소포장수량</td>
-        <td>종류</td>
-        <td class="text-md-start">제품명</td>
-        <td>공급처</td>
-        <td>순서</td>
+      <!--/*@thymesVar id="goodsList" type="apple"*/-->
+      <tr th:each="goods, index : ${goodsList}" class="text-md-center">
+        <td th:text="${goods['goodsCode']}">제품번호</td>
+        <td th:text="${goods['goodsCode']}">재고(상세)</td>
+        <td th:text="${goods['goodsCode']}">지난 3개월 판매 수</td>
+        <td th:text="${goods['goodsCode']}">재고(소포장단위)</td>
+        <td th:text="${goods['goodsCode']}">박스입수량</td>
+        <td th:text="${goods['goodsCode']}">소포장수량</td>
+        <td th:text="${goods['providerKind']}">종류</td>
+        <td th:text="${goods['name']}" class="text-md-start">제품명</td>
+        <td th:text="${goods['providerName']}">공급처</td>
+        <td th:text="${index['count']}">순서</td>
       </tr>
       </tbody>
     </table>
